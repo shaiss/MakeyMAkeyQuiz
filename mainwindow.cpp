@@ -30,30 +30,35 @@ void MainWindow::keyPressEvent(QKeyEvent *event)
         (event->key() == Qt::Key_Down) ||
         (event->key() == Qt::Key_Left)) &&
         (gameWinner == ""))
-        gameWinner = "TBC";
-        runnerUp = "TBC";
+        {
+            gameWinner = "TBC";
+            runnerUp = "none";
+        }
 
     switch(event->key())
     {
         case Qt::Key_Up:
-            qDebug() << PLAYER1;
             if(gameWinner == "TBC") gameWinner = PLAYER1;
-            if(gameWinner != PLAYER1 && runnerUp == "TBC") runnerUp = PLAYER1;
+            if(gameWinner != PLAYER1 && runnerUp == "none") runnerUp = PLAYER1;
+            qDebug() << "Winner: " + gameWinner + "    Runner Up: " + runnerUp;
             break;
         case Qt::Key_Right:
-            qDebug() << PLAYER2;
+            //qDebug() << PLAYER2;
             if(gameWinner == "TBC") gameWinner = PLAYER2;
-            if(gameWinner != PLAYER2 && runnerUp == "TBC") runnerUp = PLAYER2;
+            if(gameWinner != PLAYER2 && runnerUp == "none") runnerUp = PLAYER2;
+            qDebug() << "Winner: " + gameWinner + "    Runner Up: " + runnerUp;
             break;
         case Qt::Key_Down:
-            qDebug() << PLAYER3;
+            //qDebug() << PLAYER3;
             if(gameWinner == "TBC") gameWinner = PLAYER3;
-            if(gameWinner != PLAYER3 && runnerUp == "TBC") runnerUp = PLAYER3;
+            if(gameWinner != PLAYER3 && runnerUp == "none") runnerUp = PLAYER3;
+            qDebug() << "Winner: " + gameWinner + "    Runner Up: " + runnerUp;
             break;
         case Qt::Key_Left:
-            qDebug() << PLAYER4;
+            //qDebug() << PLAYER4;
             if(gameWinner == "TBC") gameWinner = PLAYER4;
-            if(gameWinner != PLAYER4 && runnerUp == "TBC") runnerUp = PLAYER4;
+            if(gameWinner != PLAYER4 && runnerUp == "none") runnerUp = PLAYER4;
+            qDebug() << "Winner: " + gameWinner + "    Runner Up: " + runnerUp;
             break;
         case Qt::Key_Space:
             qDebug() << "Game Reset!";
@@ -61,8 +66,13 @@ void MainWindow::keyPressEvent(QKeyEvent *event)
             break;
     }
 
-    if(gameWinner != "") ui->status->setText(gameWinner);
+    //qDebug() << "Winner: " + gameWinner + "    Runner Up: " + runnerUp;
+    if(gameWinner != "") {
+           ui->status->setText("<font color='red'>" + gameWinner +"</font>");
+    }
     else ui->status->setText("No Winner Yet...");
+    if(runnerUp !="") ui->steal->setText(runnerUp);
+    else ui->steal->setText("No Steal Yet...");
 }
 
 void MainWindow::on_reset_clicked()
@@ -71,4 +81,5 @@ void MainWindow::on_reset_clicked()
     gameWinner = "";
     runnerUp = "";
     ui->status->setText("No Winner Yet...");
+    ui->steal->setText("No Steal Yet...");
 }
