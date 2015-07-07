@@ -25,6 +25,7 @@ private slots:
 private:
     Ui::MainWindow *ui;
     QString gameWinner;
+    QString runnerUp;
 };
 
 #endif // MAINWINDOW_H
