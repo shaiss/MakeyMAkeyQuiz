@@ -63,10 +63,10 @@ void MainWindow::keyPressEvent(QKeyEvent *event)
         case Qt::Key_Space:
             qDebug() << "Game Reset!";
             gameWinner = "";
+            runnerUp = "";
             break;
     }
 
-    //qDebug() << "Winner: " + gameWinner + "    Runner Up: " + runnerUp;
     if(gameWinner != "") {
            ui->status->setText("<font color='red'>" + gameWinner +"</font>");
     }
