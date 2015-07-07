@@ -38,22 +38,22 @@ void MainWindow::keyPressEvent(QKeyEvent *event)
         case Qt::Key_Up:
             qDebug() << PLAYER1;
             if(gameWinner == "TBC") gameWinner = PLAYER1;
-            if(gameWinner == PLAYER1 && runnerUp == "TBC") runnerUp = PLAYER1;
+            if(gameWinner == PLAYER1 && runnerUp <> "TBC") runnerUp = PLAYER1;
             break;
         case Qt::Key_Right:
             qDebug() << PLAYER2;
             if(gameWinner == "TBC") gameWinner = PLAYER2;
-            if(gameWinner == PLAYER2 && runnerUp == "TBC") runnerUp = PLAYER2;
+            if(gameWinner == PLAYER2 && runnerUp <> "TBC") runnerUp = PLAYER2;
             break;
         case Qt::Key_Down:
             qDebug() << PLAYER3;
             if(gameWinner == "TBC") gameWinner = PLAYER3;
-            if(gameWinner == PLAYER3 && runnerUp == "TBC") runnerUp = PLAYER3;
+            if(gameWinner == PLAYER3 && runnerUp <> "TBC") runnerUp = PLAYER3;
             break;
         case Qt::Key_Left:
             qDebug() << PLAYER4;
             if(gameWinner == "TBC") gameWinner = PLAYER4;
-            if(gameWinner == PLAYER4 && runnerUp == "TBC") runnerUp = PLAYER4;
+            if(gameWinner <> PLAYER4 && runnerUp <> "TBC") runnerUp = PLAYER4;
             break;
         case Qt::Key_Space:
             qDebug() << "Game Reset!";
