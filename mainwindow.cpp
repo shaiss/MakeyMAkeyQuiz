@@ -62,9 +62,25 @@ void MainWindow::keyPressEvent(QKeyEvent *event)
             qDebug() << "Winner: " + gameWinner + "    Runner Up: " + runnerUp;
             break;
         case Qt::Key_Space:
-            qDebug() << "Game Reset!";
-            gameWinner = "";
-            runnerUp = "";
+                qDebug() << "New Round!";
+                gameWinner = "";
+                runnerUp = "";
+                ui->status->setText("No Winner Yet...");
+                ui->steal->setText("No Steal Yet...");
+                ui->status->setFocus();
+            break;
+        case Qt::Key_W:
+                qDebug() << "Game Reset!";
+                gameWinner = "";
+                runnerUp = "";
+                ui->status->setText("No Winner Yet...");
+                ui->steal->setText("No Steal Yet...");
+                ui->status->setFocus();
+                ui->sliderp1->setSliderPosition(0);
+                ui->sliderp2->setSliderPosition(0);
+                ui->sliderp3->setSliderPosition(0);
+                ui->sliderp4->setSliderPosition(0);
+                ui->status->setFocus();
             break;
     }
 
@@ -78,10 +94,29 @@ void MainWindow::keyPressEvent(QKeyEvent *event)
 
 void MainWindow::on_reset_clicked()
 {
+
+    qDebug() << "New Round!";
+    gameWinner = "";
+    runnerUp = "";
+    ui->status->setText("No Winner Yet...");
+    ui->steal->setText("No Steal Yet...");
+    ui->status->setFocus();
+
+}
+
+
+void MainWindow::on_btnGameReset_clicked()
+{
     qDebug() << "Game Reset!";
     gameWinner = "";
     runnerUp = "";
     ui->status->setText("No Winner Yet...");
     ui->steal->setText("No Steal Yet...");
     ui->status->setFocus();
+    ui->sliderp1->setSliderPosition(0);
+    ui->sliderp2->setSliderPosition(0);
+    ui->sliderp3->setSliderPosition(0);
+    ui->sliderp4->setSliderPosition(0);
+    ui->status->setFocus();
 }
+
