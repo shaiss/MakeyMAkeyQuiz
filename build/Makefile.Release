@@ -527,11 +527,12 @@ release\mainwindow.obj: ..\mainwindow.cpp ../mainwindow.h \
 		"C:\Program Files\Qt\5.5\msvc2013_64\include\QtWidgets\qbuttongroup.h" \
 		"C:\Program Files\Qt\5.5\msvc2013_64\include\QtWidgets\QFrame" \
 		"C:\Program Files\Qt\5.5\msvc2013_64\include\QtWidgets\qframe.h" \
-		"C:\Program Files\Qt\5.5\msvc2013_64\include\QtWidgets\QHBoxLayout" \
-		"C:\Program Files\Qt\5.5\msvc2013_64\include\QtWidgets\qboxlayout.h" \
+		"C:\Program Files\Qt\5.5\msvc2013_64\include\QtWidgets\QGridLayout" \
+		"C:\Program Files\Qt\5.5\msvc2013_64\include\QtWidgets\qgridlayout.h" \
 		"C:\Program Files\Qt\5.5\msvc2013_64\include\QtWidgets\qlayout.h" \
 		"C:\Program Files\Qt\5.5\msvc2013_64\include\QtWidgets\qlayoutitem.h" \
-		"C:\Program Files\Qt\5.5\msvc2013_64\include\QtWidgets\qgridlayout.h" \
+		"C:\Program Files\Qt\5.5\msvc2013_64\include\QtWidgets\qboxlayout.h" \
+		"C:\Program Files\Qt\5.5\msvc2013_64\include\QtWidgets\QHBoxLayout" \
 		"C:\Program Files\Qt\5.5\msvc2013_64\include\QtWidgets\QHeaderView" \
 		"C:\Program Files\Qt\5.5\msvc2013_64\include\QtWidgets\qheaderview.h" \
 		"C:\Program Files\Qt\5.5\msvc2013_64\include\QtWidgets\qabstractitemview.h" \
@@ -548,6 +549,8 @@ release\mainwindow.obj: ..\mainwindow.cpp ../mainwindow.h \
 		"C:\Program Files\Qt\5.5\msvc2013_64\include\QtWidgets\qstyle.h" \
 		"C:\Program Files\Qt\5.5\msvc2013_64\include\QtWidgets\qtabbar.h" \
 		"C:\Program Files\Qt\5.5\msvc2013_64\include\QtWidgets\qrubberband.h" \
+		"C:\Program Files\Qt\5.5\msvc2013_64\include\QtWidgets\QLCDNumber" \
+		"C:\Program Files\Qt\5.5\msvc2013_64\include\QtWidgets\qlcdnumber.h" \
 		"C:\Program Files\Qt\5.5\msvc2013_64\include\QtWidgets\QLabel" \
 		"C:\Program Files\Qt\5.5\msvc2013_64\include\QtWidgets\qlabel.h" \
 		"C:\Program Files\Qt\5.5\msvc2013_64\include\QtWidgets\QMenuBar" \
@@ -556,6 +559,10 @@ release\mainwindow.obj: ..\mainwindow.cpp ../mainwindow.h \
 		"C:\Program Files\Qt\5.5\msvc2013_64\include\QtWidgets\QPushButton" \
 		"C:\Program Files\Qt\5.5\msvc2013_64\include\QtWidgets\qpushbutton.h" \
 		"C:\Program Files\Qt\5.5\msvc2013_64\include\QtWidgets\qabstractbutton.h" \
+		"C:\Program Files\Qt\5.5\msvc2013_64\include\QtWidgets\QScrollBar" \
+		"C:\Program Files\Qt\5.5\msvc2013_64\include\QtWidgets\qscrollbar.h" \
+		"C:\Program Files\Qt\5.5\msvc2013_64\include\QtWidgets\QSpinBox" \
+		"C:\Program Files\Qt\5.5\msvc2013_64\include\QtWidgets\qspinbox.h" \
 		"C:\Program Files\Qt\5.5\msvc2013_64\include\QtWidgets\QStatusBar" \
 		"C:\Program Files\Qt\5.5\msvc2013_64\include\QtWidgets\qstatusbar.h" \
 		"C:\Program Files\Qt\5.5\msvc2013_64\include\QtWidgets\QToolBar" \

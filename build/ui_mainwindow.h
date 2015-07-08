@@ -23,7 +23,7 @@
 #include <QtWidgets/QMenuBar>
 #include <QtWidgets/QPushButton>
 #include <QtWidgets/QScrollBar>
-#include <QtWidgets/QSpinBox>
+#include <QtWidgets/QSpacerItem>
 #include <QtWidgets/QStatusBar>
 #include <QtWidgets/QToolBar>
 #include <QtWidgets/QVBoxLayout>
@@ -39,22 +39,24 @@ public:
     QLabel *status;
     QFrame *frame;
     QHBoxLayout *horizontalLayout;
-    QLabel *statusLabel_2;
     QLabel *steal;
     QGridLayout *gridLayout;
+    QScrollBar *sliderp1;
+    QLCDNumber *pcdp3;
+    QLCDNumber *lcdp4;
+    QScrollBar *sliderp3;
+    QLabel *label_4;
+    QScrollBar *sliderp2;
+    QScrollBar *sliderp4;
+    QLCDNumber *lcdp2;
     QLabel *label_3;
     QLabel *label;
     QLabel *label_2;
-    QLCDNumber *lcdNumber;
-    QLCDNumber *lcdNumber_2;
-    QLCDNumber *lcdNumber_3;
-    QLCDNumber *lcdNumber_4;
-    QLabel *label_4;
-    QScrollBar *horizontalScrollBar;
-    QScrollBar *horizontalScrollBar_2;
-    QScrollBar *horizontalScrollBar_3;
-    QSpinBox *spinBox;
+    QLCDNumber *lcdp1;
+    QHBoxLayout *horizontalLayout_2;
     QPushButton *reset;
+    QSpacerItem *horizontalSpacer;
+    QPushButton *btnGameReset;
     QMenuBar *menuBar;
     QToolBar *mainToolBar;
     QStatusBar *statusBar;
@@ -99,17 +101,10 @@ public:
         horizontalLayout->setSpacing(6);
         horizontalLayout->setContentsMargins(11, 11, 11, 11);
         horizontalLayout->setObjectName(QStringLiteral("horizontalLayout"));
-        statusLabel_2 = new QLabel(frame);
-        statusLabel_2->setObjectName(QStringLiteral("statusLabel_2"));
-        statusLabel_2->setMaximumSize(QSize(85, 16777215));
-        QFont font1;
-        font1.setPointSize(24);
-        statusLabel_2->setFont(font1);
-
-        horizontalLayout->addWidget(statusLabel_2);
-
         steal = new QLabel(frame);
         steal->setObjectName(QStringLiteral("steal"));
+        QFont font1;
+        font1.setPointSize(24);
         steal->setFont(font1);
         steal->setAlignment(Qt::AlignCenter);
 
@@ -121,72 +116,105 @@ public:
         gridLayout = new QGridLayout();
         gridLayout->setSpacing(6);
         gridLayout->setObjectName(QStringLiteral("gridLayout"));
+        sliderp1 = new QScrollBar(centralWidget);
+        sliderp1->setObjectName(QStringLiteral("sliderp1"));
+        sliderp1->setMaximum(5);
+        sliderp1->setPageStep(1);
+        sliderp1->setOrientation(Qt::Horizontal);
+
+        gridLayout->addWidget(sliderp1, 2, 0, 1, 1);
+
+        pcdp3 = new QLCDNumber(centralWidget);
+        pcdp3->setObjectName(QStringLiteral("pcdp3"));
+        pcdp3->setCursor(QCursor(Qt::ForbiddenCursor));
+        pcdp3->setDigitCount(1);
+        pcdp3->setMode(QLCDNumber::Dec);
+
+        gridLayout->addWidget(pcdp3, 3, 2, 1, 1);
+
+        lcdp4 = new QLCDNumber(centralWidget);
+        lcdp4->setObjectName(QStringLiteral("lcdp4"));
+        lcdp4->setCursor(QCursor(Qt::ForbiddenCursor));
+        lcdp4->setDigitCount(1);
+        lcdp4->setMode(QLCDNumber::Dec);
+
+        gridLayout->addWidget(lcdp4, 3, 3, 1, 1);
+
+        sliderp3 = new QScrollBar(centralWidget);
+        sliderp3->setObjectName(QStringLiteral("sliderp3"));
+        sliderp3->setMaximum(5);
+        sliderp3->setPageStep(1);
+        sliderp3->setOrientation(Qt::Horizontal);
+
+        gridLayout->addWidget(sliderp3, 2, 2, 1, 1);
+
+        label_4 = new QLabel(centralWidget);
+        label_4->setObjectName(QStringLiteral("label_4"));
+        QFont font2;
+        font2.setPointSize(14);
+        label_4->setFont(font2);
+        label_4->setAlignment(Qt::AlignCenter);
+
+        gridLayout->addWidget(label_4, 1, 2, 1, 1);
+
+        sliderp2 = new QScrollBar(centralWidget);
+        sliderp2->setObjectName(QStringLiteral("sliderp2"));
+        sliderp2->setMaximum(5);
+        sliderp2->setPageStep(1);
+        sliderp2->setOrientation(Qt::Horizontal);
+
+        gridLayout->addWidget(sliderp2, 2, 1, 1, 1);
+
+        sliderp4 = new QScrollBar(centralWidget);
+        sliderp4->setObjectName(QStringLiteral("sliderp4"));
+        sliderp4->setMaximum(5);
+        sliderp4->setPageStep(1);
+        sliderp4->setOrientation(Qt::Horizontal);
+
+        gridLayout->addWidget(sliderp4, 2, 3, 1, 1);
+
+        lcdp2 = new QLCDNumber(centralWidget);
+        lcdp2->setObjectName(QStringLiteral("lcdp2"));
+        lcdp2->setCursor(QCursor(Qt::ForbiddenCursor));
+        lcdp2->setDigitCount(1);
+        lcdp2->setMode(QLCDNumber::Dec);
+
+        gridLayout->addWidget(lcdp2, 3, 1, 1, 1);
+
         label_3 = new QLabel(centralWidget);
         label_3->setObjectName(QStringLiteral("label_3"));
+        label_3->setFont(font2);
+        label_3->setAlignment(Qt::AlignCenter);
 
         gridLayout->addWidget(label_3, 1, 3, 1, 1);
 
         label = new QLabel(centralWidget);
         label->setObjectName(QStringLiteral("label"));
+        label->setFont(font2);
+        label->setAlignment(Qt::AlignCenter);
 
         gridLayout->addWidget(label, 1, 0, 1, 1);
 
         label_2 = new QLabel(centralWidget);
         label_2->setObjectName(QStringLiteral("label_2"));
+        label_2->setFont(font2);
+        label_2->setAlignment(Qt::AlignCenter);
 
         gridLayout->addWidget(label_2, 1, 1, 1, 1);
 
-        lcdNumber = new QLCDNumber(centralWidget);
-        lcdNumber->setObjectName(QStringLiteral("lcdNumber"));
+        lcdp1 = new QLCDNumber(centralWidget);
+        lcdp1->setObjectName(QStringLiteral("lcdp1"));
+        lcdp1->setCursor(QCursor(Qt::ForbiddenCursor));
+        lcdp1->setDigitCount(1);
 
-        gridLayout->addWidget(lcdNumber, 3, 0, 1, 1);
-
-        lcdNumber_2 = new QLCDNumber(centralWidget);
-        lcdNumber_2->setObjectName(QStringLiteral("lcdNumber_2"));
-
-        gridLayout->addWidget(lcdNumber_2, 3, 1, 1, 1);
-
-        lcdNumber_3 = new QLCDNumber(centralWidget);
-        lcdNumber_3->setObjectName(QStringLiteral("lcdNumber_3"));
-
-        gridLayout->addWidget(lcdNumber_3, 3, 2, 1, 1);
-
-        lcdNumber_4 = new QLCDNumber(centralWidget);
-        lcdNumber_4->setObjectName(QStringLiteral("lcdNumber_4"));
-
-        gridLayout->addWidget(lcdNumber_4, 3, 3, 1, 1);
-
-        label_4 = new QLabel(centralWidget);
-        label_4->setObjectName(QStringLiteral("label_4"));
-
-        gridLayout->addWidget(label_4, 1, 2, 1, 1);
-
-        horizontalScrollBar = new QScrollBar(centralWidget);
-        horizontalScrollBar->setObjectName(QStringLiteral("horizontalScrollBar"));
-        horizontalScrollBar->setOrientation(Qt::Horizontal);
-
-        gridLayout->addWidget(horizontalScrollBar, 2, 1, 1, 1);
-
-        horizontalScrollBar_2 = new QScrollBar(centralWidget);
-        horizontalScrollBar_2->setObjectName(QStringLiteral("horizontalScrollBar_2"));
-        horizontalScrollBar_2->setOrientation(Qt::Horizontal);
-
-        gridLayout->addWidget(horizontalScrollBar_2, 2, 2, 1, 1);
-
-        horizontalScrollBar_3 = new QScrollBar(centralWidget);
-        horizontalScrollBar_3->setObjectName(QStringLiteral("horizontalScrollBar_3"));
-        horizontalScrollBar_3->setOrientation(Qt::Horizontal);
-
-        gridLayout->addWidget(horizontalScrollBar_3, 2, 3, 1, 1);
-
-        spinBox = new QSpinBox(centralWidget);
-        spinBox->setObjectName(QStringLiteral("spinBox"));
-
-        gridLayout->addWidget(spinBox, 2, 0, 1, 1);
+        gridLayout->addWidget(lcdp1, 3, 0, 1, 1);
 
 
         verticalLayout->addLayout(gridLayout);
 
+        horizontalLayout_2 = new QHBoxLayout();
+        horizontalLayout_2->setSpacing(6);
+        horizontalLayout_2->setObjectName(QStringLiteral("horizontalLayout_2"));
         reset = new QPushButton(centralWidget);
         reset->setObjectName(QStringLiteral("reset"));
         QSizePolicy sizePolicy1(QSizePolicy::Fixed, QSizePolicy::Fixed);
@@ -195,12 +223,23 @@ public:
         sizePolicy1.setHeightForWidth(reset->sizePolicy().hasHeightForWidth());
         reset->setSizePolicy(sizePolicy1);
 
-        verticalLayout->addWidget(reset);
+        horizontalLayout_2->addWidget(reset);
+
+        horizontalSpacer = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
+
+        horizontalLayout_2->addItem(horizontalSpacer);
+
+        btnGameReset = new QPushButton(centralWidget);
+        btnGameReset->setObjectName(QStringLiteral("btnGameReset"));
+
+        horizontalLayout_2->addWidget(btnGameReset);
+
+
+        verticalLayout->addLayout(horizontalLayout_2);
 
         MainWindow->setCentralWidget(centralWidget);
         frame->raise();
         status->raise();
-        reset->raise();
         menuBar = new QMenuBar(MainWindow);
         menuBar->setObjectName(QStringLiteral("menuBar"));
         menuBar->setEnabled(true);
@@ -221,6 +260,10 @@ public:
         MainWindow->setStatusBar(statusBar);
 
         retranslateUi(MainWindow);
+        QObject::connect(sliderp1, SIGNAL(valueChanged(int)), lcdp1, SLOT(display(int)));
+        QObject::connect(sliderp2, SIGNAL(valueChanged(int)), lcdp2, SLOT(display(int)));
+        QObject::connect(sliderp3, SIGNAL(valueChanged(int)), pcdp3, SLOT(display(int)));
+        QObject::connect(sliderp4, SIGNAL(valueChanged(int)), lcdp4, SLOT(display(int)));
 
         QMetaObject::connectSlotsByName(MainWindow);
     } // setupUi
@@ -229,13 +272,13 @@ public:
     {
         MainWindow->setWindowTitle(QApplication::translate("MainWindow", "Quiz Engine", 0));
         status->setText(QApplication::translate("MainWindow", "No Winner Yet...", 0));
-        statusLabel_2->setText(QApplication::translate("MainWindow", "Steal:", 0));
         steal->setText(QApplication::translate("MainWindow", "No Steal Yet...", 0));
-        label_3->setText(QApplication::translate("MainWindow", "TextLabel", 0));
-        label->setText(QApplication::translate("MainWindow", "TextLabel", 0));
-        label_2->setText(QApplication::translate("MainWindow", "TextLabel", 0));
-        label_4->setText(QApplication::translate("MainWindow", "TextLabel", 0));
-        reset->setText(QApplication::translate("MainWindow", "Reset", 0));
+        label_4->setText(QApplication::translate("MainWindow", "Player 3", 0));
+        label_3->setText(QApplication::translate("MainWindow", "Player 4", 0));
+        label->setText(QApplication::translate("MainWindow", "Player 1", 0));
+        label_2->setText(QApplication::translate("MainWindow", "Player 2", 0));
+        reset->setText(QApplication::translate("MainWindow", "New Round", 0));
+        btnGameReset->setText(QApplication::translate("MainWindow", "Game Reset", 0));
     } // retranslateUi
 
 };
