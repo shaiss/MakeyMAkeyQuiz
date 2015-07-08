@@ -31,7 +31,10 @@
       </property>
       <property name="font">
        <font>
-        <pointsize>48</pointsize>
+        <pointsize>60</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+        <kerning>true</kerning>
        </font>
       </property>
       <property name="layoutDirection">
@@ -61,13 +64,13 @@
         <widget class="QLabel" name="statusLabel_2">
          <property name="maximumSize">
           <size>
-           <width>60</width>
+           <width>85</width>
            <height>16777215</height>
           </size>
          </property>
          <property name="font">
           <font>
-           <pointsize>16</pointsize>
+           <pointsize>24</pointsize>
           </font>
          </property>
          <property name="text">
@@ -79,7 +82,7 @@
         <widget class="QLabel" name="steal">
          <property name="font">
           <font>
-           <pointsize>16</pointsize>
+           <pointsize>24</pointsize>
           </font>
          </property>
          <property name="text">
