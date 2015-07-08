@@ -14,12 +14,16 @@
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QButtonGroup>
 #include <QtWidgets/QFrame>
+#include <QtWidgets/QGridLayout>
 #include <QtWidgets/QHBoxLayout>
 #include <QtWidgets/QHeaderView>
+#include <QtWidgets/QLCDNumber>
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QMenuBar>
 #include <QtWidgets/QPushButton>
+#include <QtWidgets/QScrollBar>
+#include <QtWidgets/QSpinBox>
 #include <QtWidgets/QStatusBar>
 #include <QtWidgets/QToolBar>
 #include <QtWidgets/QVBoxLayout>
@@ -37,6 +41,19 @@ public:
     QHBoxLayout *horizontalLayout;
     QLabel *statusLabel_2;
     QLabel *steal;
+    QGridLayout *gridLayout;
+    QLabel *label_3;
+    QLabel *label;
+    QLabel *label_2;
+    QLCDNumber *lcdNumber;
+    QLCDNumber *lcdNumber_2;
+    QLCDNumber *lcdNumber_3;
+    QLCDNumber *lcdNumber_4;
+    QLabel *label_4;
+    QScrollBar *horizontalScrollBar;
+    QScrollBar *horizontalScrollBar_2;
+    QScrollBar *horizontalScrollBar_3;
+    QSpinBox *spinBox;
     QPushButton *reset;
     QMenuBar *menuBar;
     QToolBar *mainToolBar;
@@ -46,7 +63,7 @@ public:
     {
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName(QStringLiteral("MainWindow"));
-        MainWindow->resize(1017, 406);
+        MainWindow->resize(1017, 443);
         QSizePolicy sizePolicy(QSizePolicy::Preferred, QSizePolicy::Preferred);
         sizePolicy.setHorizontalStretch(0);
         sizePolicy.setVerticalStretch(0);
@@ -101,6 +118,75 @@ public:
 
         verticalLayout->addWidget(frame);
 
+        gridLayout = new QGridLayout();
+        gridLayout->setSpacing(6);
+        gridLayout->setObjectName(QStringLiteral("gridLayout"));
+        label_3 = new QLabel(centralWidget);
+        label_3->setObjectName(QStringLiteral("label_3"));
+
+        gridLayout->addWidget(label_3, 1, 3, 1, 1);
+
+        label = new QLabel(centralWidget);
+        label->setObjectName(QStringLiteral("label"));
+
+        gridLayout->addWidget(label, 1, 0, 1, 1);
+
+        label_2 = new QLabel(centralWidget);
+        label_2->setObjectName(QStringLiteral("label_2"));
+
+        gridLayout->addWidget(label_2, 1, 1, 1, 1);
+
+        lcdNumber = new QLCDNumber(centralWidget);
+        lcdNumber->setObjectName(QStringLiteral("lcdNumber"));
+
+        gridLayout->addWidget(lcdNumber, 3, 0, 1, 1);
+
+        lcdNumber_2 = new QLCDNumber(centralWidget);
+        lcdNumber_2->setObjectName(QStringLiteral("lcdNumber_2"));
+
+        gridLayout->addWidget(lcdNumber_2, 3, 1, 1, 1);
+
+        lcdNumber_3 = new QLCDNumber(centralWidget);
+        lcdNumber_3->setObjectName(QStringLiteral("lcdNumber_3"));
+
+        gridLayout->addWidget(lcdNumber_3, 3, 2, 1, 1);
+
+        lcdNumber_4 = new QLCDNumber(centralWidget);
+        lcdNumber_4->setObjectName(QStringLiteral("lcdNumber_4"));
+
+        gridLayout->addWidget(lcdNumber_4, 3, 3, 1, 1);
+
+        label_4 = new QLabel(centralWidget);
+        label_4->setObjectName(QStringLiteral("label_4"));
+
+        gridLayout->addWidget(label_4, 1, 2, 1, 1);
+
+        horizontalScrollBar = new QScrollBar(centralWidget);
+        horizontalScrollBar->setObjectName(QStringLiteral("horizontalScrollBar"));
+        horizontalScrollBar->setOrientation(Qt::Horizontal);
+
+        gridLayout->addWidget(horizontalScrollBar, 2, 1, 1, 1);
+
+        horizontalScrollBar_2 = new QScrollBar(centralWidget);
+        horizontalScrollBar_2->setObjectName(QStringLiteral("horizontalScrollBar_2"));
+        horizontalScrollBar_2->setOrientation(Qt::Horizontal);
+
+        gridLayout->addWidget(horizontalScrollBar_2, 2, 2, 1, 1);
+
+        horizontalScrollBar_3 = new QScrollBar(centralWidget);
+        horizontalScrollBar_3->setObjectName(QStringLiteral("horizontalScrollBar_3"));
+        horizontalScrollBar_3->setOrientation(Qt::Horizontal);
+
+        gridLayout->addWidget(horizontalScrollBar_3, 2, 3, 1, 1);
+
+        spinBox = new QSpinBox(centralWidget);
+        spinBox->setObjectName(QStringLiteral("spinBox"));
+
+        gridLayout->addWidget(spinBox, 2, 0, 1, 1);
+
+
+        verticalLayout->addLayout(gridLayout);
+
         reset = new QPushButton(centralWidget);
         reset->setObjectName(QStringLiteral("reset"));
         QSizePolicy sizePolicy1(QSizePolicy::Fixed, QSizePolicy::Fixed);
@@ -145,6 +231,10 @@ public:
         status->setText(QApplication::translate("MainWindow", "No Winner Yet...", 0));
         statusLabel_2->setText(QApplication::translate("MainWindow", "Steal:", 0));
         steal->setText(QApplication::translate("MainWindow", "No Steal Yet...", 0));
+        label_3->setText(QApplication::translate("MainWindow", "TextLabel", 0));
+        label->setText(QApplication::translate("MainWindow", "TextLabel", 0));
+        label_2->setText(QApplication::translate("MainWindow", "TextLabel", 0));
+        label_4->setText(QApplication::translate("MainWindow", "TextLabel", 0));
         reset->setText(QApplication::translate("MainWindow", "Reset", 0));
     } // retranslateUi
 
