@@ -111,7 +111,6 @@
     </item>
    </layout>
    <zorder>frame</zorder>
-   <zorder>frame</zorder>
    <zorder>status</zorder>
    <zorder>reset</zorder>
   </widget>

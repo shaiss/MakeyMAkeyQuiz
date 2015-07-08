@@ -16,6 +16,7 @@ MainWindow::MainWindow(QWidget *parent) :
     qDebug() << "Launching Quiz Engine";
     gameWinner = "";
     runnerUp = "";
+    ui->status->setFocus();
 }
 
 MainWindow::~MainWindow()
@@ -82,4 +83,5 @@ void MainWindow::on_reset_clicked()
     runnerUp = "";
     ui->status->setText("No Winner Yet...");
     ui->steal->setText("No Steal Yet...");
+    ui->status->setFocus();
 }
