@@ -86,9 +86,14 @@ void MainWindow::keyPressEvent(QKeyEvent *event)
 
     if(gameWinner != "") {
            ui->status->setText("<font color='red'>" + gameWinner +"</font>");
+           //play sound
     }
     else ui->status->setText("No Winner Yet...");
-    if(runnerUp !="") ui->steal->setText(runnerUp);
+
+    if(runnerUp !="") {
+        ui->steal->setText(runnerUp);
+        //play sound
+    }
     else ui->steal->setText("No Steal Yet...");
 }
 

@@ -561,8 +561,7 @@ release\mainwindow.obj: ..\mainwindow.cpp ../mainwindow.h \
 		"C:\Program Files\Qt\5.5\msvc2013_64\include\QtWidgets\qabstractbutton.h" \
 		"C:\Program Files\Qt\5.5\msvc2013_64\include\QtWidgets\QScrollBar" \
 		"C:\Program Files\Qt\5.5\msvc2013_64\include\QtWidgets\qscrollbar.h" \
-		"C:\Program Files\Qt\5.5\msvc2013_64\include\QtWidgets\QSpinBox" \
-		"C:\Program Files\Qt\5.5\msvc2013_64\include\QtWidgets\qspinbox.h" \
+		"C:\Program Files\Qt\5.5\msvc2013_64\include\QtWidgets\QSpacerItem" \
 		"C:\Program Files\Qt\5.5\msvc2013_64\include\QtWidgets\QStatusBar" \
 		"C:\Program Files\Qt\5.5\msvc2013_64\include\QtWidgets\qstatusbar.h" \
 		"C:\Program Files\Qt\5.5\msvc2013_64\include\QtWidgets\QToolBar" \

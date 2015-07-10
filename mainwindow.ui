@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1017</width>
-    <height>443</height>
+    <width>1374</width>
+    <height>517</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -15,6 +15,12 @@
     <horstretch>0</horstretch>
     <verstretch>0</verstretch>
    </sizepolicy>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>1046</width>
+    <height>488</height>
+   </size>
   </property>
   <property name="windowTitle">
    <string>Quiz Engine</string>
@@ -29,9 +35,15 @@
         <verstretch>0</verstretch>
        </sizepolicy>
       </property>
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>0</height>
+       </size>
+      </property>
       <property name="font">
        <font>
-        <pointsize>60</pointsize>
+        <pointsize>120</pointsize>
         <weight>75</weight>
         <bold>true</bold>
         <kerning>true</kerning>
@@ -64,7 +76,7 @@
         <widget class="QLabel" name="steal">
          <property name="font">
           <font>
-           <pointsize>24</pointsize>
+           <pointsize>60</pointsize>
           </font>
          </property>
          <property name="text">
@@ -82,6 +94,12 @@
      <layout class="QGridLayout" name="gridLayout">
       <item row="2" column="0">
        <widget class="QScrollBar" name="sliderp1">
+        <property name="minimumSize">
+         <size>
+          <width>0</width>
+          <height>50</height>
+         </size>
+        </property>
         <property name="maximum">
          <number>5</number>
         </property>
@@ -121,6 +139,23 @@
       </item>
       <item row="2" column="2">
        <widget class="QScrollBar" name="sliderp3">
+        <property name="minimumSize">
+         <size>
+          <width>0</width>
+          <height>50</height>
+         </size>
+        </property>
+        <property name="baseSize">
+         <size>
+          <width>0</width>
+          <height>0</height>
+         </size>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>8</pointsize>
+         </font>
+        </property>
         <property name="maximum">
          <number>5</number>
         </property>
@@ -149,6 +184,23 @@
       </item>
       <item row="2" column="1">
        <widget class="QScrollBar" name="sliderp2">
+        <property name="minimumSize">
+         <size>
+          <width>0</width>
+          <height>50</height>
+         </size>
+        </property>
+        <property name="baseSize">
+         <size>
+          <width>0</width>
+          <height>0</height>
+         </size>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>8</pointsize>
+         </font>
+        </property>
         <property name="maximum">
          <number>5</number>
         </property>
@@ -162,6 +214,23 @@
       </item>
       <item row="2" column="3">
        <widget class="QScrollBar" name="sliderp4">
+        <property name="minimumSize">
+         <size>
+          <width>0</width>
+          <height>50</height>
+         </size>
+        </property>
+        <property name="baseSize">
+         <size>
+          <width>0</width>
+          <height>0</height>
+         </size>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>8</pointsize>
+         </font>
+        </property>
         <property name="maximum">
          <number>5</number>
         </property>
@@ -253,6 +322,12 @@
           <verstretch>0</verstretch>
          </sizepolicy>
         </property>
+        <property name="minimumSize">
+         <size>
+          <width>0</width>
+          <height>50</height>
+         </size>
+        </property>
         <property name="text">
          <string>New Round</string>
         </property>
@@ -273,6 +348,12 @@
       </item>
       <item>
        <widget class="QPushButton" name="btnGameReset">
+        <property name="minimumSize">
+         <size>
+          <width>0</width>
+          <height>50</height>
+         </size>
+        </property>
         <property name="text">
          <string>Game Reset</string>
         </property>
@@ -283,8 +364,6 @@
    </layout>
    <zorder>frame</zorder>
    <zorder>status</zorder>
-   <zorder>horizontalLayoutWidget</zorder>
-   <zorder>horizontalLayoutWidget_2</zorder>
   </widget>
   <widget class="QMenuBar" name="menuBar">
    <property name="enabled">
@@ -294,7 +373,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>1017</width>
+     <width>1374</width>
      <height>21</height>
     </rect>
    </property>

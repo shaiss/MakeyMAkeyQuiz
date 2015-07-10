@@ -65,12 +65,13 @@ public:
     {
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName(QStringLiteral("MainWindow"));
-        MainWindow->resize(1017, 443);
+        MainWindow->resize(1374, 517);
         QSizePolicy sizePolicy(QSizePolicy::Preferred, QSizePolicy::Preferred);
         sizePolicy.setHorizontalStretch(0);
         sizePolicy.setVerticalStretch(0);
         sizePolicy.setHeightForWidth(MainWindow->sizePolicy().hasHeightForWidth());
         MainWindow->setSizePolicy(sizePolicy);
+        MainWindow->setMinimumSize(QSize(1046, 488));
         centralWidget = new QWidget(MainWindow);
         centralWidget->setObjectName(QStringLiteral("centralWidget"));
         verticalLayout = new QVBoxLayout(centralWidget);
@@ -81,8 +82,9 @@ public:
         status->setObjectName(QStringLiteral("status"));
         sizePolicy.setHeightForWidth(status->sizePolicy().hasHeightForWidth());
         status->setSizePolicy(sizePolicy);
+        status->setMinimumSize(QSize(0, 0));
         QFont font;
-        font.setPointSize(60);
+        font.setPointSize(120);
         font.setBold(true);
         font.setWeight(75);
         font.setKerning(true);
@@ -104,7 +106,7 @@ public:
         steal = new QLabel(frame);
         steal->setObjectName(QStringLiteral("steal"));
         QFont font1;
-        font1.setPointSize(24);
+        font1.setPointSize(60);
         steal->setFont(font1);
         steal->setAlignment(Qt::AlignCenter);
 
@@ -118,6 +120,7 @@ public:
         gridLayout->setObjectName(QStringLiteral("gridLayout"));
         sliderp1 = new QScrollBar(centralWidget);
         sliderp1->setObjectName(QStringLiteral("sliderp1"));
+        sliderp1->setMinimumSize(QSize(0, 50));
         sliderp1->setMaximum(5);
         sliderp1->setPageStep(1);
         sliderp1->setOrientation(Qt::Horizontal);
@@ -142,6 +145,11 @@ public:
 
         sliderp3 = new QScrollBar(centralWidget);
         sliderp3->setObjectName(QStringLiteral("sliderp3"));
+        sliderp3->setMinimumSize(QSize(0, 50));
+        sliderp3->setBaseSize(QSize(0, 0));
+        QFont font2;
+        font2.setPointSize(8);
+        sliderp3->setFont(font2);
         sliderp3->setMaximum(5);
         sliderp3->setPageStep(1);
         sliderp3->setOrientation(Qt::Horizontal);
@@ -150,15 +158,18 @@ public:
 
         label_4 = new QLabel(centralWidget);
         label_4->setObjectName(QStringLiteral("label_4"));
-        QFont font2;
-        font2.setPointSize(14);
-        label_4->setFont(font2);
+        QFont font3;
+        font3.setPointSize(14);
+        label_4->setFont(font3);
         label_4->setAlignment(Qt::AlignCenter);
 
         gridLayout->addWidget(label_4, 1, 2, 1, 1);
 
         sliderp2 = new QScrollBar(centralWidget);
         sliderp2->setObjectName(QStringLiteral("sliderp2"));
+        sliderp2->setMinimumSize(QSize(0, 50));
+        sliderp2->setBaseSize(QSize(0, 0));
+        sliderp2->setFont(font2);
         sliderp2->setMaximum(5);
         sliderp2->setPageStep(1);
         sliderp2->setOrientation(Qt::Horizontal);
@@ -167,6 +178,9 @@ public:
 
         sliderp4 = new QScrollBar(centralWidget);
         sliderp4->setObjectName(QStringLiteral("sliderp4"));
+        sliderp4->setMinimumSize(QSize(0, 50));
+        sliderp4->setBaseSize(QSize(0, 0));
+        sliderp4->setFont(font2);
         sliderp4->setMaximum(5);
         sliderp4->setPageStep(1);
         sliderp4->setOrientation(Qt::Horizontal);
@@ -183,21 +197,21 @@ public:
 
         label_3 = new QLabel(centralWidget);
         label_3->setObjectName(QStringLiteral("label_3"));
-        label_3->setFont(font2);
+        label_3->setFont(font3);
         label_3->setAlignment(Qt::AlignCenter);
 
         gridLayout->addWidget(label_3, 1, 3, 1, 1);
 
         label = new QLabel(centralWidget);
         label->setObjectName(QStringLiteral("label"));
-        label->setFont(font2);
+        label->setFont(font3);
         label->setAlignment(Qt::AlignCenter);
 
         gridLayout->addWidget(label, 1, 0, 1, 1);
 
         label_2 = new QLabel(centralWidget);
         label_2->setObjectName(QStringLiteral("label_2"));
-        label_2->setFont(font2);
+        label_2->setFont(font3);
         label_2->setAlignment(Qt::AlignCenter);
 
         gridLayout->addWidget(label_2, 1, 1, 1, 1);
@@ -222,6 +236,7 @@ public:
         sizePolicy1.setVerticalStretch(0);
         sizePolicy1.setHeightForWidth(reset->sizePolicy().hasHeightForWidth());
         reset->setSizePolicy(sizePolicy1);
+        reset->setMinimumSize(QSize(0, 50));
 
         horizontalLayout_2->addWidget(reset);
 
@@ -231,6 +246,7 @@ public:
 
         btnGameReset = new QPushButton(centralWidget);
         btnGameReset->setObjectName(QStringLiteral("btnGameReset"));
+        btnGameReset->setMinimumSize(QSize(0, 50));
 
         horizontalLayout_2->addWidget(btnGameReset);
 
@@ -243,7 +259,7 @@ public:
         menuBar = new QMenuBar(MainWindow);
         menuBar->setObjectName(QStringLiteral("menuBar"));
         menuBar->setEnabled(true);
-        menuBar->setGeometry(QRect(0, 0, 1017, 21));
+        menuBar->setGeometry(QRect(0, 0, 1374, 21));
         QSizePolicy sizePolicy2(QSizePolicy::MinimumExpanding, QSizePolicy::Minimum);
         sizePolicy2.setHorizontalStretch(0);
         sizePolicy2.setVerticalStretch(0);
