@@ -24,8 +24,6 @@ private slots:
 
     void on_btnGameReset_clicked();
 
-
-
 private:
     Ui::MainWindow *ui;
     QString gameWinner;

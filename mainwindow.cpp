@@ -1,11 +1,15 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 #include <QDebug>
+#include <QMediaPlayer>
 
 #define PLAYER1 "Player 1"
 #define PLAYER2 "Player 2"
 #define PLAYER3 "Player 3"
 #define PLAYER4 "Player 4"
+
+int winnersound, runnerupsound;
+
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
@@ -14,6 +18,8 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->setupUi(this);
     this->setFocusPolicy(Qt::StrongFocus);
     qDebug() << "Launching Quiz Engine";
+    winnersound = 0;
+    runnerupsound = 0;
     gameWinner = "";
     runnerUp = "";
     ui->status->setFocus();
@@ -67,6 +73,8 @@ void MainWindow::keyPressEvent(QKeyEvent *event)
                 runnerUp = "";
                 ui->status->setText("No Winner Yet...");
                 ui->steal->setText("No Steal Yet...");
+                winnersound = 0;
+                runnerupsound = 0;
                 ui->status->setFocus();
             break;
         case Qt::Key_W:
@@ -80,6 +88,8 @@ void MainWindow::keyPressEvent(QKeyEvent *event)
                 ui->sliderp2->setSliderPosition(0);
                 ui->sliderp3->setSliderPosition(0);
                 ui->sliderp4->setSliderPosition(0);
+                winnersound = 0;
+                runnerupsound = 0;
                 ui->status->setFocus();
             break;
     }
@@ -87,12 +97,25 @@ void MainWindow::keyPressEvent(QKeyEvent *event)
     if(gameWinner != "") {
            ui->status->setText("<font color='red'>" + gameWinner +"</font>");
            //play sound
+           if (winnersound == 0 && gameWinner != "No Winner Yet..."){
+               QMediaPlayer * music = new QMediaPlayer();
+               music->setMedia(QUrl("qrc:/sounds/correct.wav"));
+               music->play();
+                winnersound = 1;
+           }
+
     }
     else ui->status->setText("No Winner Yet...");
 
     if(runnerUp !="") {
         ui->steal->setText(runnerUp);
         //play sound
+        if (runnerupsound == 0 && runnerUp != "No Steal Yet..."){
+            QMediaPlayer * music = new QMediaPlayer();
+            music->setMedia(QUrl("qrc:/sounds/selection.wav"));
+            music->play();
+             runnerupsound = 1;
+        }
     }
     else ui->steal->setText("No Steal Yet...");
 }

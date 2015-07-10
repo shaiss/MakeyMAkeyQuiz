@@ -210,8 +210,10 @@ Makefile: ..\keyboard_test.pro "C:\Program Files\Qt\5.5\msvc2013_64\mkspecs\win3
 		"C:\Program Files\Qt\5.5\msvc2013_64\mkspecs\features\lex.prf" \
 		..\keyboard_test.pro \
 		"C:/Program Files/Qt/5.5/msvc2013_64/lib/qtmain.prl" \
+		"C:/Program Files/Qt/5.5/msvc2013_64/lib/Qt5Multimedia.prl" \
 		"C:/Program Files/Qt/5.5/msvc2013_64/lib/Qt5Widgets.prl" \
 		"C:/Program Files/Qt/5.5/msvc2013_64/lib/Qt5Gui.prl" \
+		"C:/Program Files/Qt/5.5/msvc2013_64/lib/Qt5Network.prl" \
 		"C:/Program Files/Qt/5.5/msvc2013_64/lib/Qt5Core.prl"
 	$(QMAKE) -spec win32-msvc2013 -o Makefile ..\keyboard_test.pro
 "C:\Program Files\Qt\5.5\msvc2013_64\mkspecs\features\spec_pre.prf":
@@ -351,8 +353,10 @@ Makefile: ..\keyboard_test.pro "C:\Program Files\Qt\5.5\msvc2013_64\mkspecs\win3
 "C:\Program Files\Qt\5.5\msvc2013_64\mkspecs\features\lex.prf":
 ..\keyboard_test.pro:
 "C:/Program Files/Qt/5.5/msvc2013_64/lib/qtmain.prl":
+"C:/Program Files/Qt/5.5/msvc2013_64/lib/Qt5Multimedia.prl":
 "C:/Program Files/Qt/5.5/msvc2013_64/lib/Qt5Widgets.prl":
 "C:/Program Files/Qt/5.5/msvc2013_64/lib/Qt5Gui.prl":
+"C:/Program Files/Qt/5.5/msvc2013_64/lib/Qt5Network.prl":
 "C:/Program Files/Qt/5.5/msvc2013_64/lib/Qt5Core.prl":
 qmake: FORCE
 	@$(QMAKE) -spec win32-msvc2013 -o Makefile ..\keyboard_test.pro
